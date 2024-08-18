@@ -44,7 +44,7 @@ A aplicação segue a arquitetura MVC, dividida da seguinte forma:
 2. Garanta que você tenha o PHP 7.4.33 instalado.
 3. Abra o terminal no diretório do projeto e inicie o servidor embutido do PHP:
    ```bash
-   php -S localhost:8000
+   php -S localhost:8000 -t public/
    ```
 4. Acesse a aplicação em seu navegador através do endereço `http://localhost:8000`.
 
@@ -55,4 +55,3 @@ Contribuições são bem-vindas! Se você encontrar algum problema ou tiver suge
 ---
 
 Projeto desenvolvido para fins de aprendizado e prática. Sinta-se à vontade para utilizar e modificar conforme necessário.
-+++
