@@ -1,0 +1,18 @@
+{
+    "name": "jessejunior/calculadora-imc",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jessejunior\\CalculadoraImc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jessejunior02",
+            "email": "jessepcarvalhojunior02@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
