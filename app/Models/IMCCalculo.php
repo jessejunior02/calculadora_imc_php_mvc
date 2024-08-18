@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\IMCDados;
-
 /**
  * Classe responsável por realizar o calculo IMC (Índice de Massa Corporal).
  * 
@@ -24,4 +22,24 @@ class IMCCalculo
         $this->dadosIMC = $dadosIMC;
     }
 
+    /**
+     * Realiza o calculo de IMC (Índice de Massa Corporal)
+     */
+    public function calcularIMC()
+    {
+        // Guardando os dados da class IMCDados dentro de variáveis
+        $altura = $this->dadosIMC->getAltura();
+        $peso = $this->dadosIMC->getPeso();
+
+        // Verifica se os valores são validos para o calculo
+        if($altura >= 0 && $peso >= 0)
+        {
+            // Calcular o imc
+            $imc = $peso / ($altura * $altura);
+            // Atualizar o valor do IMC na class IMCDados
+            $this->dadosIMC->setImc($imc);
+        } else {
+            $this->dadosIMC->setImc(0.0);
+        }
+    }
 }
