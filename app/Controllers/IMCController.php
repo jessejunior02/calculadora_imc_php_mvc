@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use App\Models\IMCAnalise;
 use App\Models\IMCCalculo;
@@ -25,9 +25,9 @@ $imcAnalise = new IMCAnalise($imcDados);
 /**
  * Verificando se determiados POST condiz com o formulário de entrada
  */
-if(isset($_POST['altura']) && isset($_POST['peso'])){
-    $altura = $_POST['altura'];
-    $peso = $POST['peso'];
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['altura']) && isset($_POST['peso'])){
+    $altura = str_replace(',', '.', $_POST['altura']);
+    $peso = str_replace(',', '.', $_POST['peso']);
 
 
     /**
